@@ -1,25 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="QE_0.png" />
+    <link rel="stylesheet" href="https://use.typekit.net/rgt8dns.css">
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: "monotype-modern-display", sans-serif;
+          font-variation-settings: "width" 60, "weight" 00;
+
+        }
+
+        h1 {
+          color: rgba(254, 254, 254, 0.64);
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+
+        ul {
+            margin: 0 10%;
+            padding: 10px 0px 10px 100px;
+            display: flex;
+            background: rgb(214, 251, 255);
+
+        }
+
+        ul li {
+            list-style: none;
+            padding: 10px 20px;
+
+        }
+
+        ul li a {
+            text-decoration: none;
+            font-family: "monotype-modern-display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 35px;
+            font-weight: 700;
+            font-style: normal;
+            color: rgba(117, 237, 255, 0.939);
+            position: relative;
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Personal website of Alexander Kampas">
-<meta name="author" content="Alexander Kampas">
+        }
 
-<title> Alexander Kampas </title>
+        ul li a::before {
+            content: "";
+            width: 0px;
+            height: 10px;
+            background: rgb(147, 230, 161);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transition: .7s;
+        }
+
+        ul li a:hover::before {
+            width: 50%;
+            transform: translateX(120%);
+        }
+
+                /* Hide the hamburger menu by default */
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            /* Show the hamburger menu on small screens */
+            .menu-toggle {
+                display: block;
+            }
+
+            /* By default, hide the navbar items on small screens */
+            .navbar ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navbar ul li {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar ul li a {
+                font-size: 24px;
+            }
+
+            /* When menu is active, show the navbar items */
+            .navbar ul.active {
+                display: flex;
+            }
+        }
+
+              /* Additional responsive styling for the thoughts section */
+      .thoughts {
+        padding: 20px;
+        box-sizing: border-box; /* This ensures padding is included in total width */
+      }
+
+      @media (max-width: 768px) {
+        /* Responsive styles for screens smaller than 768px */
+        .thoughts {
+          padding: 10px; /* Decrease padding on smaller screens */
+        }
+
+        .thoughts h2 {
+          font-size: 20px; /* Adjust font size for smaller screens */
+        }
+
+        .thoughts p {
+          font-size: 14px; /* Adjust paragraph font size for readability on small screens */
+        }
+      }
+
+    </style>
+    <title style="text-align: center;">Alexander Kampas | Home Page</title>
+  </head>
+  <body>
 
 
-</head>
+    <canvas id="bg"></canvas>
+    <div class="navbar">
+      <div class="brand">
+          <h3>Alexander Kampas</h3>
+          <button class = "menu-toggle">☰</button>
+      </div>
+        <ul>
 
-</body>
-  <h1>
-    Hello world!
-  </h1>
-  <p>
-  This is my first website (not counting the garbage ones I made in 6th grade).
-  </p>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#thoughts">Thoughts</a></li>
+          <li><a href="https://github.com/cosmicbean">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/alexander-kampas-166800149/">LinkedIn</a></li>
 
-</body>
+        </ul>
+    </div>
+    <main>
+
+
+      <header>
+        <h1>Alexander Kampas</h1>
+      </header>
+
+      <section class = "left">
+        <h2> About me </h2>
+        <p>
+           I'm Alexander Kampas.  I went to Carnegie Mellon University where I earned a double major in Computer Science 💻 and Music Performance (specialty in French Horn 📯 Performance).  I play other instruments, such as piano 🎹, harpsichord, accordion 🪗 , Puerto Rican cuatro 🇵🇷, tin whistle, among others.  My other interests include traditional menswear and historical tailoring, running, cycling, socializing, museums, among a smattering of other hobbies I cycle through.
+        </p>
+
+      </section>
+
+      <section id = "work" class="light">
+        <h2>Resume</h2>
+
+        <h3><a href="Alexander_Kampas.pdf">This</a></h3>
+        <p>
+         is my resume!  Take a look
+        </p>
+
+        <!-- TO DO: You need to expand on this experience more and provide more details in how this relates to computer vision generally
+        <h3> <a href = "link">  </a></h3>
+        <p>
+
+        </p>
+
+
+        <h3> <a href="link"> </a></h3>
+        <p>
+
+        </p>
+
+        <h3> <a href = "link"> </a></h3>
+        <p>
+
+        </p>
+        -->
+
+      </section>
+
+      <!--
+      <blockquote>
+        <p> Some fun quote <br>-Some fun person</p>
+      </blockquote>
+      <section id = "thoughts" class="left">
+        <h2> Some food for thought 🍎</h2>
+
+
+        <h3><a href = "link"></a></h3>
+        <p>
+
+        </p>
+
+      </section>
+      --!>
+
+
+
+      <blockquote>
+        <p> Thanks for checkin' out my new site!  Maybe next time, I'll make it myself, <br><br>
+            Best, Alex</p>
+      </blockquote>
+
+
+    </main>
+
+    <script type="module" src="/main.js"></script>
+
+    <script>
+      // JavaScript for the responsive navbar
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navbarUl = document.querySelector('.navbar ul');
+
+      menuToggle.addEventListener('click', () => {
+          navbarUl.classList.toggle('active');
+      });
+    </script>
+
+  </body>
 </html>
