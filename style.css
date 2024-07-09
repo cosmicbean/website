@@ -1,6 +1,5 @@
 body {
-  margin: 2em;
-  padding: 0;
+  padding: 3%;
   font-family: "monotype-modern-display", sans-serif;
   font-variation-settings: "width" 60, "weight" 00;
   background-color: rgb(230, 255, 230);
@@ -9,17 +8,15 @@ img {
     border: 5px solid;
     padding: 10px;
     margin: auto;
-    width: 30%;
+    width: 40%;
     height:auto;
 }
 iframe {
     border: 5px solid;
     padding: 10px;
     margin: auto;
-    width: 30%;
-}
-p {
-    max-width: 70%;
+    width: 40%;
+    aspect-ratio: 16 / 9;
 }
 center {
     display: block;
