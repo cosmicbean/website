@@ -2,18 +2,22 @@ body {
   padding: 3%;
   font-family: "monotype-modern-display", sans-serif;
   font-variation-settings: "width" 60, "weight" 00;
-  background-color: rgb(230, 255, 230);
+  background-color: rgb(215, 235, 215);
+  background-color: rgb(225, 255, 225);
+  color: rgb(60, 15, 5);
 }
 img {
     border: 5px solid;
+    background-color: rgb(245, 235, 210);
+    border-color: rgb(60, 15, 5);
     padding: 10px;
     margin: auto;
     width: 40%;
     height:auto;
-    background-color: rgb(255, 245, 230);
 }
 iframe {
     border: 5px solid;
+    border-color: rgb(70, 20, 10);
     padding: 10px;
     margin: auto;
     width: 40%;
