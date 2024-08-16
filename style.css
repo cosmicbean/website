@@ -10,6 +10,7 @@ img {
     margin: auto;
     width: 40%;
     height:auto;
+    background-color: rgb(255, 245, 230);
 }
 iframe {
     border: 5px solid;
@@ -17,9 +18,14 @@ iframe {
     margin: auto;
     width: 40%;
     aspect-ratio: 16 / 9;
+    background-color: rgb(255, 245, 230);
+}
+p {
+    font-size: 19px;
 }
 center {
     display: block;
     text-align: -webkit-center;
     unicode-bidi: isolate;
+    font-size: 19px;
 }
