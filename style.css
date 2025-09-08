@@ -111,6 +111,18 @@ p {
   h1, h2 {
     font-size: 1.1em;    /* optional: scale headings a little too */
   }
+
+  .navbar {
+    white-space: nowrap;          /* prevent wrapping */
+    overflow-x: auto;             /* allow sideways scroll if needed */
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 8px;             /* tighten left/right padding */
+  }
+  .navbar a {
+    display: inline-block;        /* avoids odd breaks */
+    margin: 0 0.25rem;            /* tiny spacing without relying on pipes */
+  }
+  
 }
 
 /* Trim default spacing between sections/links */
