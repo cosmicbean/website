@@ -74,29 +74,27 @@ p {
     margin: 14px auto;
     padding: 0 16px;
   }
-  .hero-text { padding-top: 4px; }
+  .hero-text {
+    max-width: 80ch;   /* keeps lines readable */
+    margin: 0 auto;    /* centers the whole block */
+    text-align: left;  /* ensures text inside stays left-aligned */
+  }
   .hero-photo {
     margin: 0;
     display: flex;
     justify-content: center;
   }
   .hero-photo img {
-    max-height: 58vh;       /* keeps entire fold within one screen */
+    max-height: 45vh;       /* keeps entire fold within one screen */
     width: auto;
     height: auto;
-    border-radius: 8px;
     object-fit: cover;
   }
 }
 
-/* Optional: slightly narrower wide paragraphs to reduce lines */
-.hero-text { max-width: 70ch; }
 
 /* Trim default spacing between sections/links */
 a { text-underline-offset: 2px; }
-
-
-
 
 
 /* Applies to blog post content */
