@@ -111,15 +111,16 @@ p {
   }
 
   .navbar {
-    white-space: nowrap;          /* prevent wrapping */
-    /*overflow-x: auto;             /* allow sideways scroll if needed */
-    -webkit-overflow-scrolling: touch;
-    padding: 8px 8px;             /* tighten left/right padding */
-  font-size: clamp(12px, 0.9vw, 16px);
+    margin: 0;
+    text-align: center;
+    padding: 10px 6px;                   /* less side padding */
+    font-size: clamp(10px, 3vw, 16px);   /* scales with screen width */
+    white-space: nowrap;                 /* never wraps */
   }
+
   .navbar a {
-    display: inline-block;        /* avoids odd breaks */
-    margin: 0 0.25rem;            /* tiny spacing without relying on pipes */
+    display: inline-block;
+    margin: 0 0.25rem;                   /* spacing between links */
   }
   
 }
