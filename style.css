@@ -33,3 +33,81 @@ center {
     unicode-bidi: isolate;
     font-size: 19px;
 }
+
+
+
+
+/* Base tightening */
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+.topnav {
+  font-size: clamp(12px, 0.9vw, 14px);
+  padding: 8px 12px;
+  text-align: center;
+}
+
+/* Typography: smaller, tighter, but still readable */
+h1 {
+  font-size: clamp(24px, 2.6vw + 6px, 40px);
+  line-height: 1.15;
+  margin: 8px 0 10px;
+}
+h2 {
+  font-size: clamp(18px, 1.2vw + 8px, 24px);
+  line-height: 1.2;
+  margin: 10px 0 8px;
+}
+p {
+  font-size: clamp(14px, 0.9vw + 8px, 16px);
+  line-height: 1.35;
+  margin: 6px 0 10px;
+}
+
+/* Desktop: side-by-side layout to cut vertical height */
+@media (min-width: 1024px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* text : photo */
+    gap: 20px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 14px auto;
+    padding: 0 16px;
+  }
+  .hero-text { padding-top: 4px; }
+  .hero-photo {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-photo img {
+    max-height: 58vh;       /* keeps entire fold within one screen */
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+/* Optional: slightly narrower wide paragraphs to reduce lines */
+.hero-text { max-width: 70ch; }
+
+/* Trim default spacing between sections/links */
+a { text-underline-offset: 2px; }
+
+
+
+
+
+/* Applies to blog post content */
+.blog-content {
+  margin: 0 auto;          /* centers it */
+  padding: 0 1rem;         /* small breathing room */
+}
+
+/* On desktop and larger tablets */
+@media (min-width: 768px) {
+  .blog-content {
+    max-width: 70ch;       /* ~70 characters per line is very readable */
+  }
+}
