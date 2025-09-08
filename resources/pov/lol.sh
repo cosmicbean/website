@@ -22,6 +22,8 @@ for file in *; do
 
 done
 
+for f in *.jpg; do cwebp "$f" -q 80 -o "${f%.jpg}.webp"; done
+
 rm x.txt
 # List all files, put in a new file
 ls -a . >> x.txt
