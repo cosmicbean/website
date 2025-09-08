@@ -38,10 +38,6 @@ center {
 
 /* Base tightening */
 html { scroll-behavior: smooth; }
-body { 
-    margin: 0; 
-    padding: 0;
-}
 
 .navbar {
   font-size: clamp(12px, 0.9vw, 14px);
@@ -100,22 +96,27 @@ p {
   .navbar {
     padding-top: 20px;      /* a touch more on desktop */
   }
+  .blog-content {
+    max-width: 70ch;       /* ~70 characters per line is very readable */
+  }
 }
 
+@media (max-width: 600px) {
+  p {
+    font-size: 18px;     /* bump up for easier reading */
+    line-height: 1.5;    /* slightly looser spacing for small screens */
+  }
+
+  h1, h2 {
+    font-size: 1.1em;    /* optional: scale headings a little too */
+  }
+}
 
 /* Trim default spacing between sections/links */
 a { text-underline-offset: 2px; }
-
 
 /* Applies to blog post content */
 .blog-content {
   margin: 0 auto;          /* centers it */
   padding: 0 1rem;         /* small breathing room */
-}
-
-/* On desktop and larger tablets */
-@media (min-width: 768px) {
-  .blog-content {
-    max-width: 70ch;       /* ~70 characters per line is very readable */
-  }
 }
