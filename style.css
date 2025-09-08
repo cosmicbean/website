@@ -102,7 +102,6 @@ p {
 
 @media (max-width: 600px) {
   p {
-    font-size: 19px;     /* bump up for easier reading */
     line-height: 1.5;    /* slightly looser spacing for small screens */
   }
 
@@ -114,13 +113,8 @@ p {
     margin: 0;
     text-align: center;
     padding: 10px 6px;                   /* less side padding */
-    font-size: clamp(10px, 3vw, 16px);   /* scales with screen width */
+    font-size: clamp(8px, 3vw, 16px);   /* scales with screen width */
     white-space: nowrap;                 /* never wraps */
-  }
-
-  .navbar a {
-    display: inline-block;
-    margin: 0 0.25rem;                   /* spacing between links */
   }
   
 }
@@ -132,4 +126,5 @@ a { text-underline-offset: 2px; }
 .blog-content {
   margin: 0 auto;          /* centers it */
   padding: 0 1rem;         /* small breathing room */
+  font-size: 18px;     /* bump up for easier reading */
 }
