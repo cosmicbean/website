@@ -117,6 +117,7 @@ p {
     overflow-x: auto;             /* allow sideways scroll if needed */
     -webkit-overflow-scrolling: touch;
     padding: 8px 8px;             /* tighten left/right padding */
+    font-size: 16px;     /* bump up for easier reading */
   }
   .navbar a {
     display: inline-block;        /* avoids odd breaks */
