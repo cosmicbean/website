@@ -1,4 +1,5 @@
 body {
+  padding: 0.5%;
   font-family: "monotype-modern-display", sans-serif;
   font-variation-settings: "width" 60, "weight" 00;
   background-color: rgb(215, 235, 215);
@@ -103,7 +104,7 @@ p {
 
 @media (max-width: 600px) {
   p {
-    font-size: 18px;     /* bump up for easier reading */
+    font-size: 19px;     /* bump up for easier reading */
     line-height: 1.5;    /* slightly looser spacing for small screens */
   }
 
