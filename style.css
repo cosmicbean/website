@@ -63,7 +63,7 @@ p {
 }
 
 /* Desktop: side-by-side layout to cut vertical height */
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   .hero {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr; /* text : photo */
@@ -100,7 +100,7 @@ p {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   p {
     line-height: 1.5;    /* slightly looser spacing for small screens */
   }
