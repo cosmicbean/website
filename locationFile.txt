@@ -1,4 +1,4 @@
-"Omaha"
-"Nebraska"
+"Ashburn"
+"Virginia"
 "US"
-"41.2563,-95.9404"
+"39.0437,-77.4875"
