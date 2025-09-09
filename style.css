@@ -17,12 +17,12 @@ img {
 }
 iframe {
     border: 5px solid;
-    background-color: rgb(245, 235, 210);
-    border-color: rgb(60, 15, 5);
+    border-color: rgb(70, 20, 10);
     padding: 10px;
     margin: auto;
     width: 40%;
     aspect-ratio: 16 / 9;
+    background-color: rgb(255, 245, 230);
 }
 
 center {
