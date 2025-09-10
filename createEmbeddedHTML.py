@@ -6,8 +6,10 @@ with open("locationFile.txt", "r") as f:
     x = f.readlines()
     res = []
     for c in x[-1]:
-        if c in "1234567890-,.":
+        if c in "1234567890-.":
             res.append(c)
+        elif c == " ":
+            res.append(",")
     s = "".join(res)
     final = s1 + s + s2 + s + s3
     print(final)
