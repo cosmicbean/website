@@ -25,7 +25,9 @@ done
 for f in *.jpg; do cwebp "$f" -q 80 -o "${f%.jpg}.webp"; done
 
 rm x.txt
+rm ./*.jpg
 # List all files, put in a new file
 ls -a . >> x.txt
+
 
 python3 uh.py
