@@ -1,33 +1,30 @@
 #!/bin/bash
-# Remove spaces and '#' characters from all filenames in the current directory
+# Copy Photo Booth JPGs locally, sort newest→oldest, convert to numbered WEBP files.
 
+set -euo pipefail
 shopt -s nullglob
 
-rm ./*.jpg
-cp ~/Pictures/Photo\ Booth\ Library/Pictures/*.jpg .
+src_dir="$HOME/Pictures/Photo Booth Library/Pictures"
 
-for file in *; do
-  # Skip if it's not a regular file
-  [[ -f "$file" ]] || continue
+# 1) Copy JPGs here, preserving timestamps so sorting reflects original order
+cp -p "$src_dir"/*.jpg . 2>/dev/null || true
 
-  # Create a new name by removing spaces and '#'
-  newname="${file// /}"     # remove spaces
-  newname="${newname//#/}"  # remove '#'
+# 2) Build reverse-chronological list of the copied JPGs (newest first)
+#    Using macOS-safe 'ls -t'. IFS set to newline to handle spaces in filenames.
+IFS=$'\n' files=( $(ls -t1 -- *.jpg 2>/dev/null || true) )
+unset IFS
 
-  # Rename only if the name actually changes
-  if [[ "$file" != "$newname" ]]; then
-    echo "Renaming: '$file' -> '$newname'"
-    mv -- "$file" "$newname"
-  fi
-
+# 3) Convert in that order to 0.webp, 1.webp, 2.webp, ... n.webp
+count=0
+for f in "${files[@]}"; do
+  echo "Converting: $f -> ${count}.webp"
+  cwebp "$f" -q 80 -o "${count}.webp" >/dev/null
+  ((count++))
 done
 
-for f in *.jpg; do cwebp "$f" -q 80 -o "${f%.jpg}.webp"; done
+echo "Done. Created $((count-1)) WEBP files."
 
-rm x.txt
-rm ./*.jpg
-# List all files, put in a new file
-ls -a . >> x.txt
+# Optional: if you want to remove the copied JPGs after conversion, uncomment:
+rm -f -- *.jpg
 
-
-python3 uh.py
+python3 uh.py "$count"
