@@ -11,7 +11,7 @@ cp -p "$src_dir"/*.jpg . 2>/dev/null || true
 
 # 2) Build reverse-chronological list of the copied JPGs (newest first)
 #    Using macOS-safe 'ls -t'. IFS set to newline to handle spaces in filenames.
-IFS=$'\n' files=( $(ls -t1 -- *.jpg 2>/dev/null || true) )
+IFS=$'\n' files=( $(ls -tr1 -- *.jpg 2>/dev/null || true) )
 unset IFS
 
 # 3) Convert in that order to 0.webp, 1.webp, 2.webp, ... n.webp
