@@ -28,3 +28,9 @@ echo "Done. Created $((count-1)) WEBP files."
 rm -f -- *.jpg
 
 python3 uh.py "$count"
+
+git add ./*.webp
+git add ../../blog/pov.html
+git commit -m "added photos to pov.hmtl"
+git push origin main
+
