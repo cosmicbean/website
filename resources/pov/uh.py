@@ -20,7 +20,7 @@ fd1 = open("pov1.html", "r")
 res.append(fd1.read())
 fd1.close()
 for i in range(n-1, -1, -1):
-    res.append('          <img src="../resources/pov/' + str(i) + '.webp" alt="Computer view of me">\n')
+    res.append('          <img src="../resources/pov/' + str(i) + '.webp" alt="Computer view of me" loading="lazy">\n')
 
 fd2 = open("pov2.html", "r")
 res.append(fd2.read())
