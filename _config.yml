@@ -1,0 +1,8 @@
+title: Alexander Kampas
+exclude:
+  - resources/pov/pov1.html
+  - resources/pov/pov2.html
+  - resources/pov/lol.sh
+  - resources/pov/uh.py
+  - updateLocation.sh
+  - createEmbeddedHTML.py
